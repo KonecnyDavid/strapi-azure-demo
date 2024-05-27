@@ -23,11 +23,11 @@ jobs:
       uses: actions/checkout@main
    
     - name: Login to Azure
-        uses: azure/login@v1
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_61FFF344D8CB44CFBDB46ABFFAC2082D }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_4CE3BBACDB1B4078B929614406C913C0 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_7466BF0320F04103A5544E59F4D19ED9 }}
+      uses: azure/login@v1
+      with:
+        client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_61FFF344D8CB44CFBDB46ABFFAC2082D }}
+        tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_4CE3BBACDB1B4078B929614406C913C0 }}
+        subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_7466BF0320F04103A5544E59F4D19ED9 }}
         
     - name: Setup Node ${{ env.NODE_VERSION }}
       uses: actions/setup-node@v4
